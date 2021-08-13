@@ -4,12 +4,10 @@ export default function User(props) {
     let {items:{id, name, username, email, address}} = props;
     return(
         <div>
-            <p>{id} - {name}</p>
-            <h4>{username}</h4>
-            <p>{email}</p>
-            {
-                address.map(value => <Address item={value}/>)
-            }
+            <h4>{id} - {username} - {name}</h4>
+            <p>Email - {email}</p>
+            <Address items={address}/>
+            <hr/>
         </div>
     );
 }
